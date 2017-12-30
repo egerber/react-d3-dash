@@ -1,0 +1,23 @@
+{
+  "name": "react-monitor-dashboard",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "d3": "^4.12.0",
+    "jquery": "^3.2.1",
+    "lodash": "^4.17.4",
+    "react": "^16.2.0",
+    "react-checkbox-tree": "^1.0.2",
+    "react-dom": "^16.2.0",
+    "react-grid-layout": "^0.16.2",
+    "react-scripts": "1.0.17",
+    "react-virtualized": "^9.14.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
