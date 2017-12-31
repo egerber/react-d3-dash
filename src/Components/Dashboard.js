@@ -12,7 +12,7 @@ import '../include/checkBoxTree';
 export default class Dashboard extends React.Component{
 
 	static defaultProps={
-		monitors:[],
+		datasets:[],
 	}
 	    
 	constructor(props) {
@@ -21,7 +21,7 @@ export default class Dashboard extends React.Component{
         this.state = {
             checked: [],
             expanded: [],
-            datasets:[]
+            selected_datasets:[]
         };
     }
 
@@ -29,24 +29,43 @@ export default class Dashboard extends React.Component{
 		return <ChartSelector key={dataset.name} dataset={dataset}/>
 	}
 
-	createTreeData(){
-		var treeview_data=[];
-		for(let monitor of this.props.monitors){
-			
-			let node={
-				label: monitor.name,
-				value: monitor.name,
-				children:[]
-			};
+	createNode(dataset){
 
-			
-			for(let data_logger of monitor){
-				node.children.push({
-					label:data_logger.name,
-					value: data_logger.name
-				});
+		var node={
+			label: dataset.name,
+			value: dataset.name
+		}
+
+		if(dataset.type==="Dataset"){
+			var children=[];
+			for(let child of dataset.data){
+				children.push(this.createNode(child))
 			}
 
+			node.children=children;
+		}
+
+		return node;
+	}
+
+	createTreeData(){
+		var treeview_data=[];
+		for(let dataset of this.props.datasets){
+			
+			let node={
+				label: dataset.name,
+				value: dataset.name,
+			};
+
+			if(dataset.type==="Dataset"){
+				var children=[];
+				for(let child of dataset.data){
+					children.push(this.createNode(child))
+				}
+
+				node.children=children;
+			}
+			
 			treeview_data.push(node);
 		}
 
@@ -56,7 +75,7 @@ export default class Dashboard extends React.Component{
 	checkHandler(checked){
 		//TODO make work all monitors
 		var datasets=checked.map( item_name => this.props.monitors[0].get(item_name).data);
-		this.setState({checked,datasets});
+		this.setState({checked,selected_datasets:datasets});
 	}
 
 	render(){
@@ -72,7 +91,7 @@ export default class Dashboard extends React.Component{
 	            </div>
 	            <div className="col-md-10">
 					<DynamicGrid>
-						{this.state.datasets.map( (dataset,index) => this.createElement(dataset,index))}
+						{this.state.selected_datasets.map( (dataset,index) => this.createElement(dataset,index))}
 					</DynamicGrid>
 				</div>
 			</div>

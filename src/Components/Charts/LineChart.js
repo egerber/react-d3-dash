@@ -2,11 +2,11 @@ import React from 'react';
 import * as d3 from 'd3';
 import _ from 'lodash';
 import './LineChart.css';
-import d3Chart from './d3Chart';
+import D3Chart from './D3Chart';
 
-export default class LineChart extends d3Chart{
+export default class LineChart extends D3Chart{
 
-	renderd3(svg,dataset,selector,width,height,padding){
+	renderD3(svg,dataset,selector,width,height,padding){
 		var data=dataset.data;
 		//group by id in order to draw lines for each index
 		var selected_data=Object.values(_.groupBy(data, 'id'));

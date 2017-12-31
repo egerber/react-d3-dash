@@ -1,13 +1,13 @@
 import React from 'react';
 import * as d3 from 'd3';
 import _ from 'lodash';
-import d3Chart from './d3Chart'
+import D3Chart from './D3Chart'
 import './PieChart.css';
 
-export default class PieChart extends d3Chart{
+export default class PieChart extends D3Chart{
 
 	//data is an array of objects {t: "", value: ""}
-	renderd3(svg,dataset,selector,width,height,padding){
+	renderD3(svg,dataset,selector,width,height,padding){
 		var data=dataset.data;
 		var selected_data=data.filter(selector)
 

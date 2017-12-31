@@ -1,16 +1,16 @@
 import React from 'react';
 import * as d3 from 'd3';
 import _ from 'lodash';
-import d3Chart from './d3Chart';
+import D3Chart from './D3Chart';
 import './Histogram.css';
 
-export default class Histogram extends d3Chart{
+export default class Histogram extends D3Chart{
 
 	static defaultProps={
 		bins:10,
 	}
 
-	renderd3(svg,dataset,t,width,height,padding){
+	renderD3(svg,dataset,t,width,height,padding){
 
 	}
 }

@@ -1,5 +1,5 @@
 {
-  "name": "react-monitor-dashboard",
+  "name": "react-d3-dash",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -19,5 +19,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "localDependencies": {
+    "variable-monitor": "../variable-monitor"
   }
 }

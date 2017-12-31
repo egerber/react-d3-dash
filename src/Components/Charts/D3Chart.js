@@ -1,11 +1,11 @@
 import React from 'react';
 import * as d3 from 'd3';
 
-import './d3Chart.css';
+import './D3Chart.css';
 import AutoSizer from 'react-virtualized/dist/commonjs/AutoSizer'
 
 //Boilerplate class for React component that uses d3
-class d3Chart extends React.Component{
+class D3Chart extends React.Component{
 
 	static defaultProps={
 		width:400,
@@ -27,7 +27,7 @@ class d3Chart extends React.Component{
 
 	//this method is overriden by every child class
 	//all the code of d3 is found here
-	renderd3(svg,dataset,selector,width,height,padding){
+	renderD3(svg,dataset,selector,width,height,padding){
 		//nothing happens in the base class
 	}
 
@@ -47,7 +47,7 @@ class d3Chart extends React.Component{
 	//the initial call for rendering the d3 graph is done here
 	init(){
 		
-		this.renderd3(this.state.svg,this.props.dataset,this.props.selector,this.props.width,this.props.height,this.props.padding);
+		this.renderD3(this.state.svg,this.props.dataset,this.props.selector,this.props.width,this.props.height,this.props.padding);
 	}
 
 
@@ -76,4 +76,4 @@ class d3Chart extends React.Component{
 
 }
 
-export default d3Chart;
+export default D3Chart;

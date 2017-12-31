@@ -3,11 +3,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Monitor from './Monitor/Monitor';
+import Monitor from 'variable-monitor';
 import Dashboard from './Components/Dashboard';
 
-//import stylesheets
 import './index.css';
+
+console.log(Monitor);
+//import stylesheets
 
 
 var data=[{t:1,value:3},{t:1,value:12},{t:1,value:13},{t:2,value:22},{t:2,value:12},{t:2,value:3},{t:2,value:44}];
@@ -37,4 +39,4 @@ for(var i=0;i<100;i++){
 }
 
 
-ReactDOM.render(<Dashboard monitors={[monitor1]}/>,document.getElementById('root'));
+ReactDOM.render(<Dashboard monitors={[monitor1.dataset]}/>,document.getElementById('root'));

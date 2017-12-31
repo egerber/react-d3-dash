@@ -20,9 +20,6 @@ export default class AutoResize extends React.Component{
 	}
 
 	render(){
-		/*<div style={{ display: 'flex', flex: '1', height:"100%"}}> 
- 				<div style={{ flex: '1', height:'100%' }}>
-*/
 		var child=React.Children.only(this.props.children);
 		return (
 				<AutoSizer>

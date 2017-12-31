@@ -1,12 +1,12 @@
 import React from 'react';
 import * as d3 from 'd3';
 import _ from 'lodash';
-import d3Chart from './d3Chart';
+import D3Chart from './D3Chart';
 import './BarChart.css';
 
-export default class BarChart extends d3Chart{
+export default class BarChart extends D3Chart{
 
-	renderd3(svg,dataset,selector,width,height,padding){
+	renderD3(svg,dataset,selector,width,height,padding){
 		
 		
 		var data=dataset.data;
