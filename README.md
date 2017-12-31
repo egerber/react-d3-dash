@@ -1,7 +1,7 @@
 # react-d3-dash
 React-d3-dash is a library for building dashboard to visualize your data using ReactJS and D3.
 
-React-monitor-dashboard provides UI components out of the box to visualize various data-types but allows to extend more chart invididual chart types.
+React-d3-dash provides UI components out of the box to visualize various data-types but allows to extend more chart invididual chart types using D3.
 
 ## Features
 - Grid based layout
@@ -14,7 +14,7 @@ React-monitor-dashboard provides UI components out of the box to visualize vario
 
 The package is going to published on npm soon.
 
-##Use
+## Use
 
 ```javascript
 import {Dashboard} from 'react-monitor-dashboard';
@@ -25,32 +25,31 @@ var dataset1={
 	name: "my_dataset_1",
 	type: "Dataset"
 	data: [
-			{
-				name: "logged_var_arr1",
-				type: "Array",
-				data:[
-					{t:1, id:1, value:12},
-					{t:2, id:2, value:15},
-					{t:5, id:3, value:18}
-					...
-					]
-			},
-			{
-				name: "logged_arr_2",
-				type: "Array",
-				data:[
-					{t:2, id:3, value:12},
-					{t:2, id:3, value:14},
-					...
-					]
-			}
-		   ]
+		{
+		name: "logged_var_arr1",
+		type: "Array",
+		data:[
+			{t:1, id:1, value:12},
+			{t:2, id:2, value:15},
+			{t:5, id:3, value:18}
+			...
+			]
+		},
+		{
+		name: "logged_arr_2",
+		type: "Array",
+		data:[
+			{t:2, id:3, value:12},
+			{t:2, id:3, value:14},
+			...
+			]
+		}
+	]
 }	
 		
 var dataset2={
 	...
 }
-
 
 ReactDOM.render(<Dashboard datasets={[dataset1, dataset2]}/>, document.getElementById('container'));
 
@@ -61,7 +60,7 @@ All Datasets and Data items are displayed in a tree view and can be selected for
 
 ## Documentation
 
-###Adding new Chart types
+### Adding new Chart types
 The Dashboard can be used with the provided basic chart types (Line-chart, Bar-chart, Pie-chart, etc.) but can be easily extended for more types. 
 
 Every new Chart must inherit from D3Chart. It defines a React Wrapper for D3 Charts and handles the rendering. The Child class must override 
