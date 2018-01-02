@@ -23,6 +23,7 @@ export default class Dashboard extends React.Component{
             expanded: [],
             selected_datasets:[]
         };
+
     }
 
 	createElement(dataset,index){
@@ -50,32 +51,27 @@ export default class Dashboard extends React.Component{
 
 	createTreeData(){
 		var treeview_data=[];
+	
 		for(let dataset of this.props.datasets){
 			
-			let node={
-				label: dataset.name,
-				value: dataset.name,
-			};
-
-			if(dataset.type==="Dataset"){
-				var children=[];
-				for(let child of dataset.data){
-					children.push(this.createNode(child))
-				}
-
-				node.children=children;
-			}
-			
-			treeview_data.push(node);
+			treeview_data.push(this.createNode(dataset));
 		}
 
 		return treeview_data;
 	}
 
 	checkHandler(checked){
+
+		var all_datasets={};
+		for(let dataset of this.props.datasets){
+			for(let data of dataset.data){
+				all_datasets[data.name]=data;
+			}
+		}
+
 		//TODO make work all monitors
-		var datasets=checked.map( item_name => this.props.monitors[0].get(item_name).data);
-		this.setState({checked,selected_datasets:datasets});
+		var selected_datasets=checked.map( item_name => all_datasets[item_name]);
+		this.setState({checked,selected_datasets:selected_datasets});
 	}
 
 	render(){

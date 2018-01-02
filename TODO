@@ -10,3 +10,8 @@ Add a panel of options for each type of Chart (e.g. histogram: number of bins),
 -> every Charttype returns a list of options that it takes + type of these options
 -> Chart Selector automatically creates a form with these elements
 -> Change to these options triggers a re-render of the graph
+
+
+
+@Variable-Monitor
+- Change check for array type: array cna be initially [] (remove length>1 check)

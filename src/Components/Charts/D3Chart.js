@@ -35,7 +35,7 @@ class D3Chart extends React.Component{
 	shouldComponentUpdate(nextProps,nextState) {
 		if(nextState.svg!=null){
 			if(nextProps.selector!=this.props.selector || nextProps.dataset!=this.props.dataset || nextProps.width!=this.props.width || nextProps.height!=this.props.height){
-				this.renderd3(nextState.svg,nextProps.dataset,nextProps.selector,nextProps.width,nextProps.height,nextProps.padding);
+				this.renderD3(nextState.svg,nextProps.dataset,nextProps.selector,nextProps.width,nextProps.height,nextProps.padding);
 			}
 		}
 

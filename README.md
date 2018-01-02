@@ -1,7 +1,11 @@
 # react-d3-dash
+
+![preview](https://user-images.githubusercontent.com/13987033/34472838-bc14e110-efbe-11e7-9993-963fa759815b.png)
+
 React-d3-dash is a library for building dashboard to visualize your data using ReactJS and D3.
 
 React-d3-dash provides UI components out of the box to visualize various data-types but allows to extend more chart invididual chart types using D3.
+
 
 ## Features
 - Grid based layout
