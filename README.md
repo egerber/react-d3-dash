@@ -16,7 +16,9 @@ React-d3-dash provides UI components out of the box to visualize various data-ty
 
 ## Installation
 
-The package is going to published on npm soon.
+```
+npm install react-d3-dash
+```
 
 ## Use
 
