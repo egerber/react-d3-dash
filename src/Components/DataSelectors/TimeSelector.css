@@ -1,0 +1,19 @@
+
+.timeSelector .rangeSlider input[type="range"]{ /*override bootstrap style*/
+	width:80%;
+	margin: 0px 20px;
+    display: block;
+}
+
+.rangeSlider{
+	padding:10px;
+	display: flex;
+	justify-content: center;
+}
+
+.timeSelector{
+	width:100%;
+	height:100%;
+	display:flex;
+	flex-direction:column;
+}
