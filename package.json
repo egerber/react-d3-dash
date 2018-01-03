@@ -8,8 +8,6 @@
     "react": "^15.5.4"
   },
   "dependencies": {
-    "0": "0.0.0",
-    "babel-preset-stage-0": "^6.24.1",
     "bootstrap": "^3.3.7",
     "d3": "^4.12.0",
     "jquery": "^3.2.1",
@@ -17,7 +15,6 @@
     "react-checkbox-tree": "^1.0.2",
     "react-grid-layout": "^0.16.2",
     "react-virtualized": "^9.14.1",
-    "save-dev": "^2.0.0",
     "webpack": "^2.6.1"
   },
   "scripts": {
@@ -26,8 +23,8 @@
     "build": "webpack"
   },
   "author": {
-    "name": "Your name",
-    "email": "your email"
+    "name": "Emanuel Gerber",
+    "email": "emanuel.j.gerber@gmail.com"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
