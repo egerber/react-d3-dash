@@ -20,7 +20,7 @@ npm install react-d3-dash
 ## Use
 
 ```javascript
-import {Dashboard} from 'react-d3-dash';
+import Dashboard from 'react-d3-dash';
 import {React} from 'react';
 import {ReactDOM} from 'react-dom';
 
